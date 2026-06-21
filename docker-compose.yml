@@ -1,0 +1,16 @@
+services:
+  neuraid:
+    build: .
+    image: neurai-node:latest
+    container_name: neurai-node
+    restart: unless-stopped
+    command: [-conf=/etc/neurai/neurai.conf, -datadir=/data, -printtoconsole]
+    volumes:
+      - neurai-data:/data
+      - ./neurai.conf:/etc/neurai/neurai.conf:ro   # cp neurai.conf.example neurai.conf first
+    ports:
+      - "127.0.0.1:19001:19001"   # RPC — localhost only
+      - "19000:19000"             # P2P
+      - "127.0.0.1:28334:28334"   # ZMQ
+volumes:
+  neurai-data:

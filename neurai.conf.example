@@ -1,0 +1,11 @@
+server=1
+rpcuser=CHANGEME_user
+rpcpassword=CHANGEME_use_a_long_random_password
+rpcport=19001
+rpcbind=0.0.0.0
+rpcallowip=127.0.0.1
+rpcallowip=172.16.0.0/12
+port=19000
+zmqpubhashblock=tcp://0.0.0.0:28334
+txindex=0
+dbcache=1024

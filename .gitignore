@@ -1,0 +1,8 @@
+# real config (has rpc creds) + node data — never commit
+neurai.conf
+data/
+blocks/
+chainstate/
+*.dat
+wallet*.dat
+.env
